@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Домашнє завдання: Тиждень 12</title>
+<html>
+  <head>
+    <title>VR Homework - Week 12</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <a-scene>
-        <a-assets>
-            <a-asset-item id="model-left" src="cinnamoroll.glb"></a-asset-item>
-            <a-asset-item id="model-right" src="sunna_zzz.glb"></a-asset-item>
-        </a-assets>
+      <a-assets>
+        <a-asset-item id="leftModel" src="cinnamoroll.glb"></a-asset-item>
+        <a-asset-item id="rightModel" src="sunna_zzz.glb"></a-asset-item>
+      </a-assets>
 
-        <a-sky color="#f0f8ff"></a-sky> <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="30" color="#e2e8f0"></a-plane> <a-gltf-model 
-            src="#model-left" 
-            position="-2 0 -3" 
-            scale="1 1 1">
-        </a-gltf-model>
+      <a-sky color="#FFF0F5"></a-sky>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="30" color="#FFB6C1"></a-plane>
 
-        <a-gltf-model 
-            src="#model-right" 
-            position="2 0 -3" 
-            scale="1 1 1">
-        </a-gltf-model>
+      <a-light type="ambient" color="#ffffff" intensity="0.8"></a-light>
+      <a-light type="directional" position="1 4 2" intensity="0.6"></a-light>
 
-        <a-entity camera look-controls position="0 1.6 0"></entity>
-        
+      <a-gltf-model 
+        src="#leftModel" 
+        position="-2 0.2 -5" 
+        scale="0.1 0.1 0.1">
+      </a-gltf-model>
+
+      <a-gltf-model 
+        src="#rightModel" 
+        position="2 0.2 -5" 
+        scale="0.1 0.1 0.1">
+      </a-gltf-model>
+
+      <a-entity position="0 1.6 0" camera look-controls></a-entity>
     </a-scene>
-
-</body>
+  </body>
 </html>
